@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 //app.set('port', 3000);
 // Heroku
 app.set('port', (process.env.PORT || 5000));
-app.listen(app.get('port'));
+app.listen(app.get('port'), ()=>console.log( `[server] http://localhost:` + app.get('port')));
 
 // Hello 
 
@@ -304,7 +304,7 @@ app.get('/removehistory',(req:any,res:any)=>{
 
 //  AP STARTUP
 
-app.listen(app.get('port'), ()=>console.log( `[server] http://localhost:` + app.get('port')));
+
 
 //  last
 app.use((req:any, res:any) => {
